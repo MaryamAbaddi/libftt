@@ -23,13 +23,7 @@ char
 	while (s[count] != '\0')
 		count++;
 	if (start >= count)
-	{
-		sub = malloc (1);
-		if (!sub)
-			return (NULL);
-		s[0] = '\0';
-		return (sub);
-	}
+    	return (ft_strdup(""));
 	if (len > count - start)
 		len = count - start;
 	sub = malloc (len + 1);
