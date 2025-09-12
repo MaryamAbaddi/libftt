@@ -14,15 +14,13 @@
 static int	count(int n)
 {
 	int	len;
-	int	tmp;
 
 	len = 0;
 	if (n < 0)
 		len = 1;
-	tmp = n;
-	while (tmp != 0)
+	while (n != 0)
 	{
-		tmp = tmp / 10;
+		n = n / 10;
 		len++;
 	}
 	return (len);
@@ -36,8 +34,6 @@ char	*ft_itoa(int n)
 
 	len = count(n);
 	num = n;
-	if (num < 0)
-		num = -num;
 	str = malloc(len + 1);
 	if (!str)
 		return (NULL);
@@ -47,7 +43,6 @@ char	*ft_itoa(int n)
 	if (n < 0)
 	{
 		str[0] = '-';
-		num = -num;
 	}
 	while (num > 0)
 	{
