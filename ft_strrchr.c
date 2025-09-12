@@ -25,7 +25,7 @@ char
 	{
 		if (*s == a)
 		{
-			*last = *s;
+			last = s;
 		}
 		s++;
 	}
