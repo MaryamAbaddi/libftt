@@ -22,20 +22,23 @@ char
 	count = 0;
 	while (s[count] != '\0')
 		count++;
-	if (start < count)
+	if (start >= count)
 	{
-		len = count - start;
-		sub = malloc (len + 1);
+		sub = malloc (1);
 		if (!sub)
 			return (NULL);
-		while (i < len)
-			sub[i++] = s[start++];
-		sub[i] = '\0';
+		s[0] = '\0';
 		return (sub);
 	}
-	sub = malloc(1);
+	if (len > count - start)
+		len = count - start;
+	sub = malloc (len + 1);
 	if (!sub)
 		return (NULL);
-	sub[0] = '\0';
+	i = 0;
+	while (i < len)
+    	sub[i] = s[start + i];
+		i++;
+	sub[i] = '\0';
 	return (sub);
 }
