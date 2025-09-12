@@ -32,14 +32,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	char	*str;
 
-	if (!s1 || !set)
-		return (NULL);
 	start = 0;
 	while (s1[start] && in_set(s1[start], set))
 		start++;
-	end = 0;
-	while (s1[end] != '\0')
-		end++;
+	end = ft_strlen(s1);
 	while (end > start && in_set(s1[end - 1], set))
 		end--;
 	str = (char *)malloc(end - start + 1);
