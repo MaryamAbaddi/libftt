@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mabaddi <mabaddi@student.42.fr>    +#+  +:+       +#+        */
+/*   By: mabaddi <mabaddi@student.42.fr>   		    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/07 18:50:00 by mabaddi           #+#    #+#             */
 /*   Updated: 2025/09/07 19:00:00 by mabaddi	      ###   ########.fr       */
