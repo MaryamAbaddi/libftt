@@ -11,16 +11,13 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-char
-	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char	*last;
+	const char		*last;
 	unsigned char	a;
 
 	last = NULL;
 	a = (unsigned char)c;
-	if (!s)
-		return (NULL);
 	while (*s != '\0')
 	{
 		if (*s == a)

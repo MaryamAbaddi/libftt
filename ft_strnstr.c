@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                     	 :+:      :+:    :+:  */
+/*   ft_strnstr.c                                     	:+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabaddi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -24,7 +24,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		j = 0;
 		while (big[i + j] == little[j] && (i + j) < len)
 		{
-			if (little [j + 1] == '\0')
+			if (little[j + 1] == '\0')
 				return ((char *)(big + i));
 			j++;
 		}

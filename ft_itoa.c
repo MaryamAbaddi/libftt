@@ -16,7 +16,7 @@ static int	count(int n)
 	int	len;
 
 	len = 0;
-	if (n < 0)
+	if (n <= 0)
 		len = 1;
 	while (n != 0)
 	{
@@ -40,9 +40,10 @@ char	*ft_itoa(int n)
 	str[len] = '\0';
 	if (num == 0)
 		str[0] = '0';
-	if (n < 0)
+	if (num < 0)
 	{
 		str[0] = '-';
+		num = -num;
 	}
 	while (num > 0)
 	{
@@ -51,3 +52,11 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	char *var = ft_itoa(0);
+// 	printf("%s\n", var);
+// 	free(var);
+// }

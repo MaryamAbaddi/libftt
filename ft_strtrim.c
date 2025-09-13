@@ -31,6 +31,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	start;
 	size_t	end;
 	char	*str;
+	size_t	j;
 
 	start = 0;
 	while (s1[start] && in_set(s1[start], set))
@@ -42,8 +43,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!str)
 		return (NULL);
 	i = 0;
-	while (i < end - start)
-		str[i++] = s1[start++];
+	j = end - start;
+	while (i < j)
+	{
+		str[i] = s1[start++];
+		i++;
+	}
 	str[i] = '\0';
 	return (str);
 }
+
+// #include <stdio.h>
+// int main()
+// {
+// 	printf("%s\n", ft_strtrim("abcfggfabc", "abc"));
+// }

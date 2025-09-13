@@ -17,6 +17,8 @@ void	*ft_calloc(size_t n, size_t size)
 	size_t	size1;
 	size_t	i;
 
+	if (size == 0 || n == 0)
+		return (malloc(1));
 	str = malloc(n * size);
 	if (!str)
 		return (NULL);
@@ -25,7 +27,7 @@ void	*ft_calloc(size_t n, size_t size)
 	while (i < size1)
 	{
 		str[i] = 0;
-			i++;
+		i++;
 	}
 	return (str);
 }
